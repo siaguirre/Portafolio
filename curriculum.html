@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir y Mostrar PDF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .pdf-viewer {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    
+    <header id="header-placeholder"></header>
+    <h1>Subir y Visualizar un PDF</h1>
+    
+    <!-- Área donde se mostrará el PDF -->
+    <iframe id="pdfViewer" class="pdf-viewer" width="80%" height="500px"></iframe>
+    <br><br>
+    
+    <!-- Botón para descargar el PDF -->
+    <a id="downloadLink" href="#" download>
+        <button>Descargar PDF</button>
+    </a>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            // Usar jQuery para cargar el header
+            $("#header-placeholder").load("header.html");
+        });
+
+        // Obtener elementos del DOM
+        const pdfInput = document.getElementById('pdfInput');
+        const pdfViewer = document.getElementById('pdfViewer');
+        const downloadLink = document.getElementById('downloadLink');
+
+        // Escuchar el evento de cambio en el input de archivo
+        // Crear una URL del archivo para visualizar y descargar
+        const fileURL = URL.createObjectURL(file);
+
+        // Mostrar el PDF en el iframe
+        pdfViewer.src = fileURL;
+
+        // Configurar el enlace de descarga
+        downloadLink.href = fileURL;
+        downloadLink.download = file.name;
+         
+</script>
