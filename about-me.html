@@ -1,37 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Sobre Mí</title>
-</head>
-<body>
+  </head>
+  <body>
     <header id="header-placeholder"></header>
-        <h1>Sobre Mí</h1>
     <main>
-        <section>
-            <p>Hola, mi nombre es Simón Aguirre y soy un desarrollador backend y profesor de programación a nivel secundario. Me apasiona el desarollo y la docencia, disfrutando los desafíos que ambas profesiones plantean. Me recibí como Técnico en Computación en la prestigiosa secundaria Luís A. Huergo, y actualmente estoy estudiando una Tecnicatura Superior en Desarrollo de Software. 
-            </p>
-            
-            <h2>Habilidades y Experiencias</h2>
-            <ul>
-                <li>Desarrollo web con HTML, CSS y JavaScript.</li>
-                <li>Experiencia PHP en conjunto con dos de sus Frameworks más conocidos: Laravel y Codeigniter</li>
-                <li>Bases de datos relacionales con MySQL</li>
-                <li>Conexión e integraciones con las principales herramientas de Inteligencia Artificial</li>
-            </ul>
-        </section>
+      <div class="p-about-me">
+      <p>
+        Soy un desarrollador con más de tres años de experiencia profesional, y
+        casi una década de estudio sobre el tema.
+      </p>
+      <p>
+        Egresado como Técnico en Computación, arranqué mi carrera profesional
+        recién salido del secundario, donde fui clave en el desarrollo de varios
+        clientes de la más alta categoría a nivel E-commerce.
+      </p>
+      </div>
+      <a title="Hacé clic acá para más información" href="https://www.mygeniusai.com/" target="_blank">
+      <div class="cards-container">
+          <div class="card" >
+            <a title="Hacé clic acá para más información" href="https://www.simbelecommerce.com/" target="_blank">
+              <img src="./public/img/novo-deonce-garden.png" alt="" />
+            </a>
+            <p>Algunas de las marcas con las que trabajé</p>
+          </div>
+        </a>
+        <a title="Hacé clic acá para más información" href="https://www.mygeniusai.com/" target="_blank">
+        <div class="card">
+          <img src="./public/img/my-genius-ai.png" alt="" />
+          <p>
+            MyGeniusAI conecta directamente al vendedor con una Inteligencia
+            Artificial que lo ayudará a crear contenido para su ecommerce
+          </p>
+        </div>
+      </a>
+      </div>
     </main>
-
-    <footer>
-        <p>&copy; 2024 [Tu Nombre]. Todos los derechos reservados.</p>
-    </footer>
-</body>
+  </body>
+  <footer><p>© 2024 Simon Aguirre. All rights reserved.</p></footer>
 </html>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-        $(document).ready(function(){
-            $("#header-placeholder").load("header.html");
-        });
+  $(document).ready(function () {
+    $("#header-placeholder").load("header.html");
+  });
 </script>

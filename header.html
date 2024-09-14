@@ -1,18 +1,20 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header class="main-header">
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="about-me.html">Sobre Mí</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="curriculum.html">Currículum</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-    </header>
+<p style="font-size: 1rem;"><b>Simon Aguirre/</b>UADE Designs</p>
+<div class="menu-toggle" id="menu-toggle">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</div>
+<nav id="nav-menu">
+  <a href="index.html">Inicio</a>
+  <a href="about-me.html">Sobre Mí</a>
+  <a href="servicios.html">Servicios</a>
+  <a href="curriculum.html">Currículum</a>
+  <a href="contacto.html">Contacto</a>
+</nav>
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.getElementById('nav-menu').classList.toggle('active');
+  });
+</script>
+

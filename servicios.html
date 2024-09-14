@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Nuestros Servicios</title>
-</head>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing Cards</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  </head>
+  <body>
     <header id="header-placeholder"></header>
-    <h1>¿Qué ofrezco?</h1>
-    <p> Desarrollo profesional de paginas ecommerce, con integraciones con pasarelas de pago, plataformas de envio en el pais y en el exterior y todas las plataformas que se necesiten para que tu negocio llegue a donde se merece.</p>
-</body>
-</html>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $("#header-placeholder").load("header.html");
+    <main>
+      <h2>¿Qué ofrezco?</h2>
+      <div class="cards-container">
+        <div class="card">
+          <img src="./public/img/tech-stack.png" alt="" />
+          <p>
+            Sólidos conocimientos en PHP, Javascript y bases de datos
+            relacionales.
+          </p>
+        </div>
+        <div class="card">
+          <img src="./public/img/mp-andreani-tiendamia.png" alt="" />
+          <p>
+            Más de tres años de experiencia en el rubro E-commerce, con
+            conocimientos en integraciones con las principales pasarelas de pago
+            y servicios de logística.
+          </p>
+        </div>
+        <div class="card">
+          <img src="./public/img/carrito.png" alt="" />
+          <p>
+            Gracias a mi experiencia, no solo tengo conocimientos tecnológicos,
+            si no sobre los procesos y necesidades de un comercio
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer><p>© 2024 Simon Aguirre. All rights reserved.</p></footer>\
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#header-placeholder").load("header.html");
     });
-</script>
-                
+  </script>
+</html>
