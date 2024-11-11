@@ -10,11 +10,29 @@
   <a href="servicios.html">Servicios</a>
   <a href="curriculum.html">Currículum</a>
   <a href="contacto.html">Contacto</a>
+  <button id="theme-toggle">🌞</button>
 </nav>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
   document.getElementById('menu-toggle').addEventListener('click', function() {
     this.classList.toggle('active');
     document.getElementById('nav-menu').classList.toggle('active');
   });
+
+  $('body').attr('class','light-mode');
+  $('#theme-toggle').on('click', function() {
+
+    if ($('body').hasClass('dark-mode')) {
+      $('body').attr('class','light-mode');
+      $(this).text('🌞');
+    } else {
+      $('body').attr('class','dark-mode');
+      $(this).text('🌙');
+    }
+  });
+
+
 </script>
+
+
 
