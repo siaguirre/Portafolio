@@ -384,7 +384,7 @@ embed {
   display: none;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
   h1 {
     font-size: 2rem; 
   }
