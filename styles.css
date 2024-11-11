@@ -25,6 +25,7 @@ body {
   background-color: var(--second-color);
   min-height: 100vh;
   overflow: auto;
+  height: 100%;
   flex-grow: 1;
 }
 h1 {
@@ -40,6 +41,10 @@ p,
 a {
   font-size: 1.5rem;
 }
+
+p {
+    padding-top: 10px;
+  }
 a {
   text-decoration: none;
 }
@@ -110,10 +115,11 @@ nav a {
 
 
 .menu-toggle {
-  display: none; /* Ocultar el botón por defecto en pantallas grandes */
+  display: none; 
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  padding: 20px;
 }
 
 .bar {
@@ -143,7 +149,7 @@ footer {
 }
 
 footer p {
-  text-align: center; /* Centra el texto dentro del footer */
+  text-align: center; 
   padding: 20px;
 }
 .profile-container {
@@ -241,14 +247,14 @@ footer p {
 }
 
 .p-about-me {
-  width: 50%; /* Ajusta el ancho según lo necesites */
-  margin: 0 auto; /* Centrar el contenedor horizontalmente */
-  text-align: center; /* Centrar el texto dentro del contenedor */
+  width: 50%; 
+  margin: 0 auto; 
+  text-align: center; 
 }
 
 .pdf-frame {
   width: 75%;
-  height: 600px; /* Ajusta la altura según tus necesidades */
+  height: 600px; 
   border: 1px solid #ddd;
   background-color: var(--card-bg-color);
   display: flex;
@@ -259,7 +265,7 @@ footer p {
 .container-pdf {
   display: flex;
   width: 80%;
-  height: 700px; /* Ajusta la altura según tus necesidades */
+  height: 700px; 
   border: 1px solid #ddd;
   background-color: var(--card-bg-color);
   justify-content: center;
@@ -276,10 +282,10 @@ embed {
 .cv-img {
   display: none;
 }
-/* Para pantallas de hasta 400px (móviles pequeños) */
+
 @media (max-width: 400px) {
   h1 {
-    font-size: 2rem; /* Ajuste de tamaño de fuente */
+    font-size: 2rem; 
   }
 
   h2 {
@@ -290,11 +296,12 @@ embed {
   button,
   p,
   a {
-    font-size: 0.875rem; /* Ajuste de tamaño de fuente */
+    font-size: 0.875rem; 
   }
 
+ 
   form {
-    width: 90%; /* Hacer que el formulario ocupe más espacio en pantallas pequeñas */
+    width: 90%; 
   }
 
   /* menu borguesa*/
@@ -304,13 +311,16 @@ embed {
 
   main {
     gap: 10px;
-  }
 
+  }
+  body {
+    overflow-y: auto;
+  }
   nav {
-    display: none; /* Ocultar el menú por defecto en pantallas pequeñas */
+    display: none; 
     flex-direction: column;
     position: absolute;
-    top: 60px; /* Ajusta según el alto del header */
+    top: 60px; 
     right: 10px;
     background-color: var(--accent-color);
     padding: 10px;
@@ -331,10 +341,10 @@ embed {
   }
 
   nav.active {
-    display: flex; /* Mostrar el menú cuando esté activo */
+    display: flex; 
   }
 
-  /* Animación para el botón de menú */
+ 
   .menu-toggle.active .bar:nth-child(1) {
     transform: rotate(45deg) translateY(8px);
   }
@@ -348,47 +358,48 @@ embed {
   }
 
   .cards-container {
-    flex-direction: column; /* Apilar las tarjetas verticalmente */
-    gap: 15px; /* Reducir espacio entre tarjetas */
+    flex-direction: column; 
+    gap: 15px; 
     overflow-x: auto;
     width: 100%;
   }
 
   .button {
-    width: 150px; /* Hacer el botón más pequeño */
-    height: 40px; /* Ajuste de altura del botón */
+    width: 150px; 
+    height: 40px; 
   }
 
   .p-about-me {
-    width: 90%; /* Ajuste de ancho para el contenedor de texto */
+    width: 90%; 
   }
 
   .profile-container {
-    flex-direction: column; /* Alinear en columna en lugar de fila */
-    align-items: center; /* Centrar elementos */
+    flex-direction: column; 
+    align-items: center; 
     width: 100%;
     display: flex;
     justify-content: space-between;
   }
   
   .card {
-    width: 100%; /* Hacer que la tarjeta ocupe todo el ancho */
+    width: 100%;
     align-items: center;
   }
 
   .pdf-frame {
     display: none;
     width: 100%;
-    height: 600px; /* Ajusta la altura según tus necesidades */
+    height: 600px; 
     border: 1px solid #ddd;
     background-color: var(--card-bg-color);
     display: flex;
     margin: auto;
   }
+  
   .container-pdf {
     display: flex;
     width: 100%;
-    height: auto; /* Ajusta la altura según tus necesidades */
+    height: auto; 
     border: 1px solid #ddd;
     background-color: var(--card-bg-color);
     justify-content: center;
@@ -405,11 +416,7 @@ embed {
 
   .cv-img {
     width: 100%;
-  }
-
-  footer {
-    margin: 0;
-    padding: 0;
+    display: block;
   }
 }
 
