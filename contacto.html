@@ -6,24 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Página de Contacto</title>
-    <body>
-      <header id="header-placeholder"></header>
-      <main>
-        <h2>¿Te interesa? Contactame acá</h2>
-        <form action="">
-          <input type="text" name="" id="" placeholder="Tu nombre y apellido" />
-          <input type="email" name="" id="" placeholder="Tu email" />
-          <textarea name="" id="" placeholder="Dejame un mensaje"></textarea>
-          <button class="button" type="submit">Enviar</button>
-        </form>
-      </main>
-      <footer><p>© 2024 Simon Aguirre. All rights reserved.</p></footer>\
-    </body>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $("#header-placeholder").load("header.html");
-      });
-    </script>
   </head>
+  <body>
+    <header id="header-placeholder"></header>
+    <main>
+      <h2>¿Te interesa? Contactame acá</h2>
+      <form id="form" action="">
+        <input type="text" name="" id="" placeholder="Tu nombre y apellido" />
+        <input type="email" name="" id="" placeholder="Tu email" />
+        <textarea name="" id="" placeholder="Dejame un mensaje"></textarea>
+        <button id="submit" class="button" type="submit">Enviar</button>
+      </form>
+    </main>
+    <footer><p>© 2024 Simon Aguirre. All rights reserved.</p></footer>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#header-placeholder").load("header.html");
+      $("#form").on("submit", function (event) {
+        console.log('hola')
+        event.preventDefault();
+        var isValid = true;
+
+        var name = $("input[type='text']").val().trim();
+        var email = $("input[type='email']").val().trim();
+        var message = $("textarea").val().trim();
+
+        $(".error").remove();
+
+        if (name === "") {
+          $("input[type='text']").after("<small class='error'>Por favor, ingresa tu nombre y apellido.</small>");
+          isValid = false;
+        }
+
+        if (email === "") {
+          $("input[type='email']").after("<small class='error'>Por favor, ingresa tu email.</small>");
+          isValid = false;
+        } else if (!validateEmail(email)) {
+          $("input[type='email']").after("<small class='error'>Por favor, ingresa un email válido.</small>");
+          isValid = false;
+        }
+
+        if (message === "") {
+          $("textarea").after("<small class='error'>Por favor, deja un mensaje.</small>");
+          isValid = false;
+        }
+
+        if (!isValid) {
+          event.preventDefault();
+          return
+        }
+        
+        $("main").append("<div class='success-message'>Recibí tu mensaje! Estaremos en contacto.</div>");
+        $(".success-message").css({
+          "background-color": "#d4edda",
+          "color": "#155724",
+          "padding": "10px",
+          "margin-top": "10px",
+          "border": "1px solid #c3e6cb",
+          "border-radius": "5px"
+        });
+
+        $("input[type='text']").val("");
+        $("input[type='email']").val("");
+        $("textarea").val("");
+        });
+
+      function validateEmail(email) {
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+      }
+    });
+  </script>
+ 
 </html>
